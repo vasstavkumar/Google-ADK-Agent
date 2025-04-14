@@ -68,7 +68,7 @@ root_agent = Agent(
 
 session_service = InMemorySessionService()
 
-APP_NAME = "weather_tutorial_agent_team"
+APP_NAME = "agent_team"
 USER_ID = "user_1_agent_team"
 SESSION_ID = "session_001_agent_team"
 
