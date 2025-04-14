@@ -8,6 +8,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+username = os.getenv("username")
+host = os.getenv("host")
+database = os.getenv("database")
+password = os.getenv("password")
+
 mcp = FastMCP("postgres-notion-server")
 
 notion_base_url = "https://api.notion.com/v1/databases/{DATABASE_ID}/query"
@@ -52,10 +57,10 @@ def postgres_data(query: str):
     try:
         conn = pg.connect(
             port=5432,
-            host="localhost",
-            database="Employees",
-            password="Vasstav5",
-            user="postgres"
+            host=host,
+            database=database,
+            password=password,
+            user=username
         )
         cursor = conn.cursor()
         cursor.execute(query=query)
