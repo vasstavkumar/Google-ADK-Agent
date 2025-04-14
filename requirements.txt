@@ -1,0 +1,6 @@
+google-adk
+litellm
+psycopg2-binary
+requests
+mcp
+
